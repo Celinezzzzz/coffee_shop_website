@@ -1,4 +1,3 @@
-
 # ☕ Nitro Coffee Shop Website
 
 A stylish marketing website for a fictional coffee shop, **Nitro**, built with HTML and SCSS. The site features a modern UI with animations and highlights products, promotions, and store details.
@@ -6,7 +5,6 @@ A stylish marketing website for a fictional coffee shop, **Nitro**, built with H
 ![Homepage Screenshot](./assets/images/coffee-shop-landing-page-preview.png)
 
 ![Homepage Screenshot](./assets/images/coffee-shop-menu-page-preview.png)
-
 
 ## Features
 
@@ -17,16 +15,17 @@ A stylish marketing website for a fictional coffee shop, **Nitro**, built with H
 - 📍 Store address, business hours, and social media links
 - 🔧 Modular SCSS architecture using partials and variables
 
-
 ## Tech Stack
 
 - HTML5
 - SCSS (Modular structure with `@use`)
 - CSS Animations (`@keyframes`)
 - Google Fonts (`Open Sans`)
+
 ## Local Setup
 
 To run locally:
+
     1. Clone the repo:
     ```bash
     git clone https://github.com/Celinezzzzz/coffee_shop_website.git
