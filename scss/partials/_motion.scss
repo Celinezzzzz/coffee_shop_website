@@ -1,0 +1,35 @@
+@use "variables" as *;
+
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+@keyframes flash {
+  0%, 100% {
+    background-color: $graphite; 
+    color: $white;
+  }
+  50% {
+    background-color: $nitro-blue; 
+    color: $white; 
+  }
+}
+
+@keyframes press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

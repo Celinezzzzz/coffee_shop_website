@@ -1,0 +1,86 @@
+@use 'variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures predictable box model */
+    list-style-type: none;/* Remove bullet-point */
+    text-decoration: none; /* Remove underline */
+    /* outline: 1px dashed grey; */
+}
+
+body {
+    font-family: $font-family;
+    font-weight: $regular;
+}
+
+
+.nav{
+    padding:20px;
+    background-color: $nitro-pink;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    &__logo{
+        width: 50px;
+    }
+
+    &__heading{
+        display: inline-block; 
+        /* only takes the width it needs to fit its content */
+    }
+    
+    &__list{
+        display: inline-block;
+        margin: 0 20px;
+    }
+    
+    &__item{
+        display: inline-block;
+        margin:0 20px;
+    }
+    
+    &__link{
+        color: $graphite;
+        /* font-size: 21px; */
+        font-size: 1.3125rem;
+        font-weight: $regular;
+    }
+    
+    &__link--active{
+        color: $nitro-blue;
+    }
+}
+
+
+
+h1,h2{
+    /* font-size: 60px; */
+    font-size:3.75rem;
+    font-weight: $light;
+}
+
+h3,.nav-heading{
+    /* font-size: 33px; */
+    font-size:2.0625rem;
+    font-weight: $light;
+}
+
+
+p{
+    /* font-size: 18px; */
+    font-size: 1.125rem;
+    font-weight: $regular;
+}
+
+ul{
+    /* font-size: 21px; */
+    font-size: 1.3125rem;
+    font-weight: $regular;
+}
+
+.icon{
+        width: 50px;
+    }

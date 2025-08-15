@@ -7,8 +7,8 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/landing.css" />
+    <!-- <link rel="stylesheet" href="./css/global.css" /> -->
+    <link rel="stylesheet" href="./scss/landing.css" />
 
     <title>Coffee Shop - Home</title>
   </head>
@@ -16,19 +16,21 @@
     <!-- header -->
     <header>
       <nav class="nav">
-        <a href="./index.html" class="nav__logo">
-          <img
-            src="./assets/images/coffee-beans-logo-and-footer.svg"
-            alt="coffee-bean-logo"
-          />
-        </a>
-        <h2 class="nav__heading">nitro</h2>
+        <div class="nav-title-container">
+          <a href="./index.html" class="nav__logo">
+            <img
+              src="./assets/images/coffee-beans-logo-and-footer.svg"
+              alt="coffee-bean-logo"
+            />
+          </a>
+          <h2 class="nav__heading">nitro</h2>
+        </div>
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link nav__link--active" href="./index.html">ABOUT</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./pages/menu.html">MENU</a>
+            <a class="nav__link nav__link" href="./pages/menu.html">MENU</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="./pages/menu.html">SHOP NOW</a>
@@ -45,9 +47,12 @@
           Coffee is a brewed drink prepared from roasted coffee beans, the seeds
           of berries from certain Coffca species.
         </p>
-        <a href="./pages/menu.html" class="button">
-          <button class="" shop-now-button>SHOP NOW</button>
-        </a>
+        <div class="button-wrapper">
+          <div class="button__border"></div>
+          <a href="./pages/menu.html">
+            <button class="button shop-now-button">SHOP NOW</button>
+          </a>
+        </div>
       </div>
       <img
         src="./assets/images/coffeebeans-hero.png"
@@ -58,6 +63,7 @@
 
     <!-- main -->
     <main>
+      <!-- product -->
       <section class="product-section">
         <h2 class="product-section__heading">Our Products</h2>
         <div class="product-container">
@@ -67,8 +73,13 @@
               alt="coffee-beans"
               class="product__image"
             />
-            <h3 class="product__name">Cold Brew</h3>
-            <p class="product__price">$18.99</p>
+            <div class="product-sub-container">
+              <div class="product__content">
+                <h3 class="product__name">Coffee Beans</h3>
+                <p class="product__unit">Pack of 3</p>
+              </div>
+              <p class="product__price">$19</p>
+            </div>
           </div>
           <div class="card product">
             <img
@@ -76,8 +87,13 @@
               alt="cold-brew"
               class="product__image"
             />
-            <h3 class="product__name">Cold Brew</h3>
-            <p class="product__price">$4.99</p>
+            <div class="product-sub-container">
+              <div class="product__content">
+                <h3 class="product__name">Cold Brew</h3>
+                <p class="product__unit">1 can</p>
+              </div>
+              <p class="product__price">$5</p>
+            </div>
           </div>
           <div class="card product">
             <img
@@ -85,13 +101,56 @@
               alt="in-house-brew"
               class="product__image"
             />
-            <h3 class="product__name">In-house Brew</h3>
-            <p class="product__price">$2.99</p>
+            <div class="product-sub-container">
+              <div class="product__content">
+                <h3 class="product__name">In-house Brew</h3>
+                <p class="product__unit">1 cup</p>
+              </div>
+              <p class="product__price">$3</p>
+            </div>
           </div>
         </div>
-        <a href="./pages/menu.html">
-          <button class="button button--view-all">VIEW ALL</button>
-        </a>
+        <div class="button-wrapper">
+          <div class="button__border"></div>
+          <a href="./pages/menu.html">
+            <button class="button view-all-button">VIEW ALL</button>
+          </a>
+        </div>
+      </section>
+
+      <!-- learn-more -->
+      <section class="learn-more">
+        <div class="learn-more__container-1">
+          <h2 class="learn-more__heading">We're Different</h2>
+          <p class="learn-more__description">
+            We grow and roast our own beans. Every bean, every cup, every step
+            of the way, we strive for excellence.
+          </p>
+          <div class="learn-more__icon">
+            <img class="icon" src="./assets/images/planting.svg" alt="" />
+            <img class="icon" src="./assets/images/coffee-beans.svg" alt="" />
+            <img class="icon" src="./assets/images/coffee-cup.svg" alt="" />
+          </div>
+          <div class="button-wrapper">
+            <div class="button__border"></div>
+            <a href="./pages/menu.html">
+              <button class="button button--learn-more">LEARN MORE</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="learn-more__container-2">
+          <div class="learn-more__border"></div>
+          <img
+            class="learn-more__image"
+            src="./assets/images/tiltedcan.png"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <!-- discount -->
+      <section class="discount-section">
         <p class="product__discount">
           Get 20% off your first order with code:
           <span class="product__discount-code">FirstNitro</span>
@@ -101,6 +160,11 @@
 
     <!-- footer -->
     <footer class="footer">
+      <img
+        class="footer__image--1"
+        src="./assets/images/coffee-beans-logo-and-footer.svg"
+        alt="coffee-bean-logo"
+      />
       <div class="footer-container address">
         <h3 class="footer-container__title">Address</h3>
         <p>503 Broadway Penthouse</p>
@@ -133,6 +197,11 @@
           />
         </a>
       </div>
+      <img
+        class="footer__image--2"
+        src="./assets/images/coffee-beans-logo-and-footer.svg"
+        alt="coffee-bean-logo"
+      />
     </footer>
   </body>
 </html>

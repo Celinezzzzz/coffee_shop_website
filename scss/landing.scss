@@ -1,0 +1,238 @@
+@use './partials/global' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+@use './partials/motion' as *;
+
+.hero-banner{
+    background-color: $nitro-pink;
+    padding: 40px 140px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    &__container{
+        /* display: inline-block; */
+        width: 35%;
+        /* margin-right:500px; */
+    }
+    &__heading{
+        margin-bottom: 20px;
+    }
+    &__discription{
+        margin-bottom: 40px;
+    }
+    &__image{
+        /* display: inline-block; */
+        height: 380px;
+    }
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-section{
+    width: 90%;
+    padding: 40px 0;
+    text-align: center;
+    margin: 0 auto;
+
+    .product-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0;
+        flex-wrap: wrap;
+        gap: 80px;
+    }
+}
+
+
+.product{
+    // mixins
+    @include card(330px, 440px, $white); 
+    
+    &__name{
+        margin: 10px 0;
+    }
+
+    &__image{
+        margin: 20px;
+        height: 280px;
+    }
+    &__content{
+        text-align: left;
+    }
+    &__unit{
+        color: #909090;
+    }
+    &__price{
+        color: $nitro-blue;
+        font-size:2.0625rem;
+        font-weight: $bold;
+        align-self: center;
+    }
+
+    &-sub-container{
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: $nitro-pink;
+    }
+}
+
+
+
+.learn-more{
+    width: 90%;
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    &__container-1{
+        width: 38%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        text-align: left;
+        gap: 30px;
+    }
+    &__icon{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__container-2{
+        background-image: url(../assets/images/coldbrewbackground.png);
+        background-size: cover;
+        width: 400px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    &__border{
+      width: 100%;
+      height: 100%;
+      border: $nitro-blue solid 5px;
+      bottom: 15px;
+      right: 15px;
+      position: absolute;
+      z-index: 1;
+      transition: transform 0.2s ease;
+    }
+
+    &__image{
+        position: absolute;
+        animation: spin 2s linear infinite;
+    }
+}
+
+
+.discount-section{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    .product__discount{
+        background-color: $graphite;
+        color:$white;
+        /* font-size: 45px; */
+        font-size: 2.8125rem;
+        font-weight: $regular;
+        padding: 40px;
+        margin: 100px 0 100px 0;
+        animation: flash 2.5s infinite;
+    
+    }
+}
+
+
+
+.footer{
+    background-color: $nitro-pink;
+    padding: 40px 200px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &__image--1 {
+      width: 120px;
+      opacity: 25%;
+      position: absolute;
+      top: 20px;
+      left: -40px;
+    }
+
+    &__image--2 {
+      width: 120px;
+      opacity: 25%;
+      position: absolute;
+      bottom: 20px;
+      right: -40px;
+    }
+}
+
+
+.footer-container__title{
+    margin-bottom: 20px;
+    /* font-size: 33px; */
+    font-size:2.0625rem;
+    font-weight: $light;
+}
+
+
+.button-wrapper {
+  width: 180px;
+  height: 60px;
+  position: relative;
+}
+
+.button{
+    // mixins
+  @include button(180px, auto, $nitro-blue); 
+
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+
+  &__border {
+    width: 100%;
+    height: 100%;
+    border: black solid 3px;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+
+.product__discount-code,.business-days{
+    font-weight: $bold;
+}
+
+/* block+specific width+margin:0 auto */
+/* inline/inline-block+vertical-align: middle */
+
+
+.button {
+  @include button(180px, auto, $nitro-blue); 
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  animation: none;
+
+  &:hover {
+    animation: press 0.3s ease;
+  }
+}
